@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	<title>計算機</title>
+</head>
+
+<body>
+	<h1>計算機</h1>
+	<form action="calculatorRegister" method="get">
+		<!--================ requiredを記述することで未入力を受け付けない =====================-->
+		<input type="text" required name="leftSidenumber">
+		<select name="symbol">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="×">×</option>
+			<option value="÷">÷</option>
+		</select>
+		<input type="text" required name="rightSidenumber">
+		<button type="submit">=</button><br>
+		<p th:text="${calculatorResult}"></p>
+	</form>
+</body>
+
+</html>

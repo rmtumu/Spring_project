@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	<title>引き算</title>
+</head>
+
+<body>
+	<h1>引き算</h1>
+	<form action="minusRegister" method="get">
+		<!--================ requiredを記述することで未入力を受け付けない =====================-->
+		<input type="text" required name="leftSide">
+		－
+		<input type="text" required name="rightSide">
+		<button type="submit">=</button><br>
+		<p th:text="${minusResult}"></p>
+	</form>
+</body>
+
+</html>
